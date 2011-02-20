@@ -1,7 +1,9 @@
 /**
  *
- *
- *
+ *	Pesty Labels v0.1
+ *	
+ *	Copyright (c) Tom Arnfeld 2011
+ *	https://github.com/tarnfeld/PestyLabels
  *
  */
  
@@ -102,6 +104,7 @@
 		
 	}
 	
+	// jQuery FN
 	$.fn.pestylabels = function(override, options) {
 		return this.each(function(){
 			(new $.pestylabels(this, override, options));
