@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Pesty Labels | Tom Arnfeld</title>
+		
+		<script src="jquery.js"></script>
+		<script src="../src/jquery.pestylabels.js"></script>
+		
+		<script>
+		$(function() {
+		
+			$('input').pestylabels();
+		
+		});
+		</script>
+		
+		<style>
+			body {
+				font-family: 'Lucida Grande';
+				font-size: 11px;
+			}
+			.pestylabels {
+				padding-top: 8px;
+				padding-left: 8px;
+				font-size: 11px;
+				color: #909090;
+			}
+			input {
+				padding: 5px;
+				width: 250px;
+				font-size: 11px;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<fieldset>
+			<div>
+				<label>Normal</label><br /><input placeholder="Username" />
+			</div>
+			<br />
+			<div>
+				<label>Password</label><br /><input placeholder="Password" type="password" />
+			</div>
+		</fieldset>
+	</body>
+	
+</html>
