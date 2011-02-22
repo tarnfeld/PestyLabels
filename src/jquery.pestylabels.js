@@ -43,7 +43,7 @@
 			}
 			else
 			{
-				$(base.label).fadeIn(150);
+				$(base.label).fadeIn(300);
 			}
 		}
 		
@@ -97,15 +97,16 @@
 			$(el).blur(function() {
 				base.handleBlur();
 			});
-			$(el).keydown(function() {
-				base.beforeLength = $(this).val().length;
-			});
-			$(el).keyup(function() {
-				base.afterLength = $(this).val().length;
-				
-				if(!base.isEmpty() && base.beforeLength < base.afterLength)
+			$(el).keyup(function() {				
+				if(!base.isEmpty())
 				{
 					base.handleValueChanged();
+				}
+				else
+				{
+					setTimeout(function() {
+						base.handleValueChanged();
+					}, 700);
 				}
 			});
 			
