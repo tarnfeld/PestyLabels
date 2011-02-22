@@ -83,9 +83,8 @@
 				cursor: $(el).css('cursor'),
 				color: '#909090',
 				fontSize: $(el).css('font-size'),
-				paddingTop: base.pxToInt($(el).css('padding-top')) + base.pxToInt($(el).css('border-top-width')) + 2,
-				paddingLeft: base.pxToInt($(el).css('padding-left')) + base.pxToInt($(el).css('border-left-width')) + 2,
-				lineHeight: base.pxToInt($(el).css('line-height'))
+				paddingTop: base.pxToInt($(el).css('padding-top')) + base.pxToInt($(el).css('border-top-width')),
+				paddingLeft: base.pxToInt($(el).css('padding-left')) + base.pxToInt($(el).css('border-left-width')) + 2
 			});
 			
 			// Handle events
