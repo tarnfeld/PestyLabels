@@ -39,12 +39,22 @@
 		base.handleValueChanged = function() {
 			if(!base.isEmpty())
 			{
-				$(base.label).fadeOut(250);
+				$(base.label).hide();
 			}
 			else
 			{
 				$(base.label).fadeIn(150);
 			}
+		}
+		
+		// Useful functions
+		base.pxToInt = function(string)
+		{
+			if(string)
+			{
+				return parseInt(string.replace('px', ''));
+			}
+			return 0;
 		}
 		
 		// Get the label text
@@ -63,14 +73,19 @@
 			var top = $(el).position().top;
 			var left = $(el).position().left;
 			
-			// Create the label element
+			// Create the label element with some nice styles
 			base.label = $('<label class="pestylabels">' + base.placeholder + '</label>');
 			$(base.label).css({
 				position: 'absolute',
 				top: top,
 				left: left,
 				display: 'block',
-				cursor: $(el).css('cursor')
+				cursor: $(el).css('cursor'),
+				color: '#909090',
+				fontSize: $(el).css('font-size'),
+				paddingTop: base.pxToInt($(el).css('padding-top')) + base.pxToInt($(el).css('border-top-width')) + 2,
+				paddingLeft: base.pxToInt($(el).css('padding-left')) + base.pxToInt($(el).css('border-left-width')) + 2,
+				lineHeight: base.pxToInt($(el).css('line-height'))
 			});
 			
 			// Handle events

@@ -20,16 +20,25 @@
 				font-family: 'Lucida Grande';
 				font-size: 11px;
 			}
-			.pestylabels {
-				padding-top: 8px;
-				padding-left: 8px;
-				font-size: 11px;
-				color: #909090;
-			}
 			input {
 				padding: 5px;
 				width: 250px;
 				font-size: 11px;
+				-webkit-appearance: none;
+				border: 1px solid #000;
+			}
+			input.padding {
+				padding: 25px;
+			}
+			input.font {
+				font-size: 25px;
+			}
+			#center {
+				position: absolute;
+				width: 250px;
+				margin-left: -125px;
+				left: 50%;
+				top: 100px;
 			}
 		</style>
 		
@@ -38,10 +47,18 @@
 	<body>
 		<fieldset>
 			<div>
-				<label>Normal</label><br /><input placeholder="Username" />
+				<label>Normal</label><br /><input placeholder="Username" type="text" />
 			</div>
 			<br />
 			<div>
+				<label>Padding</label><br /><input placeholder="Username" type="text" class="padding" />
+			</div>
+			<br />
+			<div>
+				<label>Big</label><br /><input placeholder="Username" type="text" class="font" />
+			</div>
+			<br />
+			<div id="center">
 				<label>Password</label><br /><input placeholder="Password" type="password" />
 			</div>
 		</fieldset>
