@@ -1,4 +1,5 @@
 #PestyLabels
-PestyLabels is a little work in progress jQuery plugin for adding placeholder labels to your input fields, similar to the way me.com does. The labels stay inside the field once you click and only disappear when you start typing.
+PestyLabels is a little work in progress jQuery plugin for adding placeholder labels to your input fields, similar to the way me.com does.
 
-**Please do contribute if you feel you can improve my Javascript, or how this works!**
+##Development
+Work is happening on the **develop** branch, please commit to the development branch if you have any suggestions, thanks.
